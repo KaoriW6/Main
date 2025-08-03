@@ -1,0 +1,2 @@
+# Kaoriware C:
+- Private Script~

@@ -35,7 +35,7 @@ CreditsSection2:SubLabel({Text = "Please dont contact me for no reason~"});
 
 local CreditsSection4 = getgenv().CreditsTab:Section({Side = "Right"});
 
-CreditsSection4:Header({Text = "© 2025 HikuoriW. All rights reserved."});
+CreditsSection4:Header({Text = "© 2025 KaoriW. All rights reserved."});
 
 CreditsSection4:Divider();
 

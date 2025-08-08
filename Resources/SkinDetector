@@ -1,0 +1,33 @@
+-- // Disclaimer: This was made with joke C:
+
+local NiggaDetector = {}
+
+local ColorNames = {
+    ["Really black"] = true, -- // True nigga right here.
+    ["Black"] = true,
+    ["Dark brown"] = true,
+    ["Reddish brown"] = true,
+    ["Dark orange"] = true,
+    ["Earth orange"] = true,
+    ["Burnt Sienna"] = true,
+    ["Dirt brown"] = true,
+    ["Medium brown"] = true,
+    ["CGA brown"] = true,
+    ["Pine Cone"] = true,
+    ["Dark taupe"] = true,
+    ["Brown"] = true,
+    ["Rust"] = true
+}
+
+function NiggaDetector.Get(Color)
+    return ColorNames[Color.Name];
+end
+
+function NiggaDetector:Check(Plr)
+    local Char = Plr.Character or Plr.CharacterAdded:Wait();
+    local Skin = Char:FindFirstChild("Body Colors");
+
+    return Skin and NiggaDetector.Get(Skin.HeadColor) and NiggaDetector.Get(Skin.TorsoColor) or false;
+end
+
+return NiggaDetector;
